@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="../anime.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    
+    <title> mokuroku</title>
+   
+</head>
+<body>
+   <header>
+        <nav>
+            <div class="nav-leftside">
+        <div class="menu-btn" id="menuBtn">
+            <div class="menu-btn__line menu-btn__line--top"></div>
+            <div class="menu-btn__line menu-btn__line--middle"></div>
+            <div class="menu-btn__line menu-btn__line--bottom"></div>
+        </div>
+           <nav class="side-menu" id="sideMenu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../anime.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="../nav items/about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="../nav items/dubbed-anime.html" class="menu-link">Dubbed Anime</a></li>
+                <li class="menu-item"><a href="../nav items/movies.html" class="menu-link">Movies</a></li>
+                <li class="menu-item"><a href="../nav items/mostpopular.html" class="menu-link">Most Popular</a></li>
+                <li class="menu-item"><a href="../nav items/latest-release.html" class="menu-link">Latest Release</a></li>
+                <li class="menu-item"><a href="../nav items/watchlist.html" class="menu-link">watchlist</a></li>
+            </ul>
+            </nav>
+               
+              <div class="overlay" id="overlay"></div>
+        <script>
+                // ===== STEP 1: Get all the elements we need =====
+                // The hamburger button
+                const menuBtn = document.getElementById('menuBtn');
+                // The side menu that slides in
+                const sideMenu = document.getElementById('sideMenu');
+                // The dark overlay behind the menu
+                const overlay = document.getElementById('overlay');
+                // All the menu links
+                const menuLinks = document.querySelectorAll('.menu-link');
+                
+                // ===== STEP 2: Create a function to toggle the menu =====
+                function toggleMenu() {
+                    // Toggle the 'open' class on the menu button (changes to X)
+                    menuBtn.classList.toggle('open');
+                    // Toggle the 'open' class on the side menu (slides it in)
+                    sideMenu.classList.toggle('open');
+                    // Toggle the 'show' class on the overlay (makes it visible)
+                    overlay.classList.toggle('show');
+                }
+                
+                // ===== STEP 3: Add click event listeners =====
+                // When the hamburger button is clicked
+                menuBtn.addEventListener('click', toggleMenu);
+                
+                // When the overlay is clicked
+                overlay.addEventListener('click', toggleMenu);
+                
+                // When any menu link is clicked
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        // Close the menu
+                        toggleMenu();
+                      
+                    });
+                });
+                
+                // ===== STEP 4: Add keyboard support =====
+                // Close menu when Escape key is pressed
+                document.addEventListener('keydown', function(event) {
+                    // Check if the menu is open and Escape key was pressed
+                    if (sideMenu.classList.contains('open') && event.key === 'Escape') {
+                        toggleMenu();
+                    }
+                });
+        </script>
+        
+            <div class="logo">
+                <img src="../images/mokuroku-logo.png" alt="mokuroku">
+                <span class="logo-text"><b>OKUROKU</b> </span>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search..." class="search">
+                <div class="search-icon">
+                 <i class="fas fa-search" ></i>
+                </div> 
+            </div>    
+            <div class="social">
+              <img src="../images/instagram.jpg" alt="instagram" class="instagram">
+              <img src="../images/discord.png" alt="discord" class="discord">
+              <img src="../images/twitter.png" alt="twitter" class="twitter">
+            </div>
+        </div>
+            <div class="genaric">
+               <div class="randomize">
+                   <div class="hst-icon">
+                    <i class="fas fa-random"></i>
+                   </div>
+                   <div class="hst-name">
+                    <span> RANDOMIZE</span> 
+
+                   </div>
+               </div>     
+                <div class="my-zone">
+                 <div class="hst-icon">
+                    <i class="fa-solid fa-feather"></i>
+                 </div>
+                 <div class="hst-name">
+                   <span> MYZONE</span> 
+
+                   </div>
+                </div>
+                <div class="community">
+                    <div class="hst-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="hst-name">
+                      <span> COMMUNITY</span> 
+   
+                    </div>
+                </div>
+               
+            </div>
+                  <div class="profile">
+                <div class="notification">
+                    <img src="../images/notification-icon.png" alt="notification-icon" class="notification-icon">
+                </div>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"> </i>
+                </div>
+            </div>           
+        </nav>
+    </header>
+
+
+ <div class="page-container-section">
+       <div class="page-container-header"> Dubbed Anime</div>
+       <div class="card-container">
+           <div class="card">
+          <a href="../anime discription/re-zero.html">
+              <img src="../images/re-zero-s1.PNG" alt="re-zero">
+              <div class="card-content">
+                  <h3 class="card-title">Re:zero</h3>
+                   <p class="card-description">Time-looped hero suffers brutal fates repeatedly.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/code-geass.html">
+              <img src="../images/code-geass.PNG" alt="code-geass">
+              <div class="card-content">
+                  <h3 class="card-title">Code Geass</h3>
+                   <p class="card-description">Genius outcast leads rebellion with mecha.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/plunderer.html">
+              <img src="../images/plunderer.PNG" alt="plunderer">
+              <div class="card-content">
+                  <h3 class="card-title">Plunderer</h3>
+                   <p class="card-description">Numbers define power in fantasy war.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/sword-art-online.html">
+              <img src="../images/sword-art-online.PNG" alt="sword-art-online">
+              <div class="card-content">
+                  <h3 class="card-title">Sword Art Online</h3>
+                   <p class="card-description">Trapped gamers fight to escape VRMMORPG.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/saga-of-tanya-the-evil.html">
+              <img src="../images/saga-of-tanya-the-evil.PNG" alt="saga-of-tanya-the-evil">
+              <div class="card-content">
+                  <h3 class="card-title">Saga Of Tanya The Evil</h3>
+                   <p class="card-description">Ruthless soldier reincarnated as magic girl.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/91-days.html">
+              <img src="../images/91-days.PNG" alt="91-days">
+              <div class="card-content">
+                  <h3 class="card-title">91 Days</h3>
+                   <p class="card-description">Mafia revenge unfolds during Prohibition era.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/GATE.html">
+              <img src="../images/GATE.PNG" alt="GATE">
+              <div class="card-content">
+                  <h3 class="card-title">GATE</h3>
+                   <p class="card-description">Modern soldiers battle fantasy world threats.</p>
+              </div>
+          </a>
+         </div>
+        <div class="card">
+          <a href="../anime discription/to-my-eternity.html">
+              <img src="../images/to-your-eternity.PNG" alt="to-my-eternity">
+              <div class="card-content">
+                  <h3 class="card-title">To Your Eternity</h3>
+                   <p class="card-description">Immortal being, emotional journey, endless growth.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/peachboy-riverside.html">
+              <img src="../images/peachboy-riverside.PNG" alt="peachboy-riverside">
+              <div class="card-content">
+                  <h3 class="card-title"> Peachboy Riverside</h3>
+                   <p class="card-description">Multiple Momotaros, wandering adventure, unexpected battles.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/that-time-i-got-reincarnated-as-a-slime.html">
+              <img src="../images/that-time-i-got-reincarnated-as-a-slime.PNG" alt="that-time-i-got-reincarnated-as-a-slime">
+              <div class="card-content">
+                  <h3 class="card-title">That Time I Got Reincarnated as a Slime</h3>
+                   <p class="card-description">Slime evolves, builds kingdom, befriends enemies</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/drifters.html">
+              <img src="../images/drifters.PNG" alt="drifters">
+              <div class="card-content">
+                  <h3 class="card-title">Drifters</h3>
+                   <p class="card-description">Historical warriors, fantasy war, chaotic battles.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/log-horizon.html">
+              <img src="../images/log-horizon.PNG" alt="log-horizon">
+              <div class="card-content">
+                  <h3 class="card-title">Log Horizon</h3>
+                   <p class="card-description">Trapped gamers, strategy, rebuilding virtual society.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/vinland-saga.html">
+              <img src="../images/vinland-saga.PNG" alt="vinland-saga">
+              <div class="card-content">
+                  <h3 class="card-title">Vinland Saga</h3>
+                   <p class="card-description">Viking revenge, war, harsh survival journey.
+
+                   </p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/86.html">
+              <img src="../images/86.PNG" alt="86">
+              <div class="card-content">
+                  <h3 class="card-title">86</h3>
+                   <p class="card-description">Mecha warfare, discrimination, emotional sacrifices. </p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/no-game-no-life.html">
+              <img src="../images/no-game-no-life.PNG" alt="no-game-no-life">
+              <div class="card-content">
+                  <h3 class="card-title">No Game No Life</h3>
+                   <p class="card-description">Sibling gamers conquer fantasy world challenges.
+
+                   </p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/overlord.html">
+              <img src="../images/overlord.PNG" alt="overlord">
+              <div class="card-content">
+                  <h3 class="card-title">Overlord</h3>
+                   <p class="card-description">Overpowered undead rules virtual fantasy world.
+
+                   </p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/seraph-of-the-end.html">
+              <img src="../images/seraph-of-the-end.PNG" alt="seraph-of-the-end">
+              <div class="card-content">
+                  <h3 class="card-title">Seraph of The End</h3>
+                   <p class="card-description">Vampires vs. humans in post-apocalypse war.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/black-clover.html">
+              <img src="../images/black-clover.PNG" alt="black-clover">
+              <div class="card-content">
+                  <h3 class="card-title">Black Clover</h3>
+                   <p class="card-description">Magicless boy dreams of becoming wizard.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/tower-of-gods.html">
+              <img src="../images/Tower-of-gods.PNG" alt="tower-of-gods">
+              <div class="card-content">
+                  <h3 class="card-title">Tower of Gods</h3>
+                   <p class="card-description">Climber seeks truth in mysterious tower.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/parasyte.html">
+              <img src="../images/parasyte.PNG" alt="parasyte">
+              <div class="card-content">
+                  <h3 class="card-title">Parasyte</h3>
+                   <p class="card-description">Teen coexists with alien hand parasite.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/dr-stone.html">
+              <img src="../images/dr-stone.PNG" alt="dr-stone">
+              <div class="card-content">
+                  <h3 class="card-title">Dr.Stone</h3>
+                   <p class="card-description">Science revives humanity after apocalypse.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/charlotte.html">
+              <img src="../images/charlotte.PNG" alt="charlotte">
+              <div class="card-content">
+                  <h3 class="card-title">Charlotte</h3>
+                   <p class="card-description">Superpower teens uncover tragic fate.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/dororo.html">
+              <img src="../images/dororo.PNG" alt="dororo">
+              <div class="card-content">
+                  <h3 class="card-title">Dororo</h3>
+                   <p class="card-description">Cursed swordsman reclaims stolen body parts.</p>
+              </div>
+          </a>
+         </div>
+         <div class="card">
+          <a href="../anime discription/is-it-wrong-to-pick-up-girls-in-a-dungeon.html">
+              <img src="../images/is-it-wrong-to-pick-up-girls-in-a-dungeon.PNG" alt="is-it-wrong-to-pick-up-girls-in-a-dungeon">
+              <div class="card-content">
+                  <h3 class="card-title">Is It Wrong To Pick Up Girls In a Dungeon</h3>
+                   <p class="card-description">Adventurer levels up in divine dungeon.</p>
+              </div>
+          </a>
+         </div>
+      
+     </div>
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="footer-container-top">
+        <div class="logo-footer">
+            <img src="../images/mokuroku-logo.png" alt="mokuroku">
+            <span class="logo-footer-text"><b>OKUROKU</b> </span>
+        </div>
+        <div class="socials-footer">
+            <div class="join-now-text"> <b>Join Now</b></div>
+            <div class="socials-footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-reddit" style="color: #fc3b1f;"></i>
+                <i class="fa-brands fa-discord" style="color: #6e83d3;"></i>
+            </div>
+        </div>
+     </div>
+     <hr>
+     <div class="footer-container-bottom">
+        
+        <div class="footer-container-bottom-leftside">
+            <p class="fcbl-tos"> <b>Terms Of Services</b></p>
+            <p class="fcbl-ma"><b>Mokuroku App</b></p>
+        </div>
+        <div class="footer-container-bottom-rightside">
+            <div class="help">
+                <p>Help</p>
+                <i class="fa-sharp fa-regular fa-circle-question"></i>
+
+            </div>
+            <div class="contact-us-footer">
+                <button class="contact-us-button"> contact us</button>
+            </div>
+        </div>
+     </div>
+        
+
+    </div>
+
+    </footer>
+</html>

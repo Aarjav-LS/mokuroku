@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="anime.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="script.js">
+    
+    <title> mokuroku</title>
+   
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-leftside">
+        <div class="menu-btn" id="menuBtn">
+            <div class="menu-btn__line menu-btn__line--top"></div>
+            <div class="menu-btn__line menu-btn__line--middle"></div>
+            <div class="menu-btn__line menu-btn__line--bottom"></div>
+        </div>
+           <nav class="side-menu" id="sideMenu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="./anime.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="./nav items/about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="./nav items/dubbed-anime.html" class="menu-link">Dubbed Anime</a></li>
+                <li class="menu-item"><a href="./nav items/movies.html" class="menu-link">Movies</a></li>
+                <li class="menu-item"><a href="./nav items/mostpopular.html" class="menu-link">Most Popular</a></li>
+                <li class="menu-item"><a href="./nav items/latest-release.html" class="menu-link">Latest Release</a></li>
+                <li class="menu-item"><a href="./nav items/watchlist.html" class="menu-link">watchlist</a></li>
+            </ul>
+            </nav>
+               
+              <div class="overlay" id="overlay"></div>
+        <script>
+                // ===== STEP 1: Get all the elements we need =====
+                // The hamburger button
+                const menuBtn = document.getElementById('menuBtn');
+                // The side menu that slides in
+                const sideMenu = document.getElementById('sideMenu');
+                // The dark overlay behind the menu
+                const overlay = document.getElementById('overlay');
+                // All the menu links
+                const menuLinks = document.querySelectorAll('.menu-link');
+                
+
+                
+                // ===== STEP 2: Create a function to toggle the menu =====
+                function toggleMenu() {
+                    // Toggle the 'open' class on the menu button (changes to X)
+                    menuBtn.classList.toggle('open');
+                    // Toggle the 'open' class on the side menu (slides it in)
+                    sideMenu.classList.toggle('open');
+                    // Toggle the 'show' class on the overlay (makes it visible)
+                    overlay.classList.toggle('show');
+                }
+               
+                
+                // ===== STEP 3: Add click event listeners =====
+                // When the hamburger button is clicked
+                menuBtn.addEventListener('click', toggleMenu);
+                
+                // When the overlay is clicked
+                overlay.addEventListener('click', toggleMenu);
+                
+                // When any menu link is clicked
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        // Close the menu
+                        toggleMenu();
+                      
+                    });
+                });
+                
+                // ===== STEP 4: Add keyboard support =====
+                // Close menu when Escape key is pressed
+                document.addEventListener('keydown', function(event) {
+                    // Check if the menu is open and Escape key was pressed
+                    if (sideMenu.classList.contains('open') && event.key === 'Escape') {
+                        toggleMenu();
+                    }
+                });
+        </script>
+        
+            <div class="logo">
+                <img src="./images/mokuroku-logo.png" alt="mokuroku">
+                <span class="logo-text"><b>OKUROKU</b> </span>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search..." class="search">
+                <div class="search-icon">
+                 <i class="fas fa-search" ></i>
+                </div> 
+            </div>    
+            <div class="social">
+              <img src="./images/instagram.jpg" alt="instagram" class="instagram">
+              <img src="./images/discord.png" alt="discord" class="discord">
+              <img src="./images/twitter.png" alt="twitter" class="twitter">
+            </div>
+        </div>
+            <div class="genaric">
+               <div class="randomize">
+                   <div class="hst-icon">
+                    <i class="fas fa-random"></i>
+                   </div>
+                   <div class="hst-name">
+                    <span> RANDOMIZE</span> 
+
+                   </div>
+               </div>     
+                <div class="my-zone">
+                 <div class="hst-icon">
+                    <i class="fa-solid fa-feather"></i>
+                 </div>
+                 <div class="hst-name">
+                   <span> MYZONE</span> 
+
+                   </div>
+                </div>
+                <div class="community">
+                    <div class="hst-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="hst-name">
+                      <span> COMMUNITY</span> 
+   
+                    </div>
+                </div>
+               
+            </div>
+            
+            <div class="profile">
+                    <div class="notification">
+                        <img src="./images/notification-icon.png" alt="notification-icon" class="notification-icon">
+                    </div>
+                <a class="profile-link-page" href="./nav items/profile.html">
+                    <div class="profile-icon">
+                        <i class="fa-solid fa-user"> </i>
+                    </div>
+                </a> 
+            </div>  
+                   
+        </nav>
+    </header>
+    <div class="spotlight">
+      <div class="spotlight-container">
+        <div class="spotlight-wrapper">
+            <a href="./anime discription/onepiece-discription.html">
+            <div class="spotlight-item">
+                <img src="./images/onepiece.jpg" alt="onepiece  " class="spotlight-img">
+            
+              <div class="spotlight-discription">
+                 <div class="spotlight-text">
+                   #1 spotlight
+                 </div>
+                 <div class="spotlight-name"> 
+                 onepiece
+                 </div>
+                 <div class="spotlight-info">
+                    <div><i class="fa-solid fa-circle-play"> TV </i></div>
+                    <div><i class="fa-solid fa-clock"> 24m </i></div>
+                    <div><i class="fa-solid fa-calendar"> oct 20 , 1999 </i></div>
+ 
+                 </div>
+                 <div class="spotlight-summary">
+                     <p>Gold Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line. The capture and execution of Roger by the World Government brought a change throughout the world. His last words before his death revealed the existence of the greatest treasure in the world, One Piece. It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the Pirate King. Enter Monkey Luffy, a 17-year-old boy who defies your standard definition of a pirate. Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun, Luffy's reason for being a pirate is one of pure wonder: the thought of an exciting adventure that leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures, unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all fortunes—One Piece. [Written by MAL Rewrite]</p>
+                 </div>
+             
+                </div>
+            </div>
+             </a>
+             <a href="./anime discription/solo-leveling-s2.html">
+            <div class="spotlight-item">
+                <img src="./images/solo-leveling-spotlight.png" alt="solo-leveling" class="spotlight-img">
+            
+              <div class="spotlight-discription">
+                 <div class="spotlight-text">
+                   #2 spotlight
+                 </div>
+                 <div class="spotlight-name"> 
+                 Solo Leveling Season 2: Arise from the Shadows
+                 </div>
+                 <div class="spotlight-info">
+                    <div><i class="fa-solid fa-circle-play"> TV </i></div>
+                    <div><i class="fa-solid fa-clock"> 24m </i></div>
+                    <div><i class="fa-solid fa-calendar"> jan 5 , 2025 </i></div>
+ 
+                 </div>
+                 <div class="spotlight-summary">
+                    <p>The second season takes place directly after the events of the first season and picks up with Sung Jinwoo embracing his newfound powers as the Shadow Monarch. While he keeps his new powers a secret from people around him, a strange hunter who has been lost for nearly ten years returns with a dire warning of an upcoming catastrophe.</p>
+                 </div>
+             
+                </div>
+            </div>
+             </a>
+             <a href="./anime discription/dragon-ball-daima.html">
+            <div class="spotlight-item">
+                <img src="./images/dragonballdaimaspotlight.png" alt="dragonballdaima  " class="spotlight-img">
+            
+              <div class="spotlight-discription">
+                 <div class="spotlight-text">
+                   #3 spotlight
+                 </div>
+                 <div class="spotlight-name"> 
+                 Dragon Ball Daima
+                 </div>
+                 <div class="spotlight-info">
+                    <div><i class="fa-solid fa-circle-play"> TV </i></div>
+                    <div><i class="fa-solid fa-clock"> 24m </i></div>
+                    <div><i class="fa-solid fa-calendar"> oct 11 , 2024 </i></div>
+ 
+                 </div>
+                 <div class="spotlight-summary">
+                    <p>After saving the world from the destructive might of Majin Buu, Gokuu Son and his allies look forward to a well-earned rest. However, unbeknownst to them, their battle was recorded and observed by Gomah, an evil being who assumes the title of King in the Demon Realm, filling the void left behind with the death of former ruler Dabura. At Gomah's side is Degesu, the younger brother of Higashi no Kaioshin, a being who lords over the universe. Jealous of his brother's power, Degesu works alongside Gomah to steal Earth's Dragon Balls and preemptively subdue any potential future enemies. Calling upon the power of the legendary dragon Shenron, Gomah wishes for Gokuu and his friends to be reverted into children, intending to rob them of the limitless power that defeated Buu. With Earth's greatest warriors shrunken down, Gomah abducts Dende, the planet's acting god. But Gokuu refuses to be set back by his new body, working to master his younger form to fight as proficiently as he could as an adult. Joined by Kaioshin and Glorio—a mysterious but seemingly rebellious demon—Gokuu pursues Gomah to the Demon Realm in order to rescue Dende and restore his friends to their natural ages.</p>
+                 </div>
+             
+                </div>
+            </div>
+             </a>
+             <a href="./anime discription/zenshu.html">
+            <div class="spotlight-item">
+                <img src="./images/zenshu-spotlight.avif" alt="zenshu " class="spotlight-img">
+            
+              <div class="spotlight-discription">
+                 <div class="spotlight-text">
+                   #4 spotlight
+                 </div>
+                 <div class="spotlight-name"> 
+                 Zenshu
+                 </div>
+                 <div class="spotlight-info">
+                    <div><i class="fa-solid fa-circle-play"> TV </i></div>
+                    <div><i class="fa-solid fa-clock"> 24m </i></div>
+                    <div><i class="fa-solid fa-calendar"> jan 5 , 2025 </i></div>
+ 
+                 </div>
+                 <div class="spotlight-summary">
+                    <p>After graduating from high school, Natsuko Hirose starts her career as an animator. Her talent quickly flourishes, and she makes her debut as a director in no time. Her first anime becomes a massive hit, sparking a social phenomenon and earning her recognition as an up-and-coming genius director. Her next project is set to be a romantic comedy movie themed around first love! However, having never been in love herself, Natsuko struggles to understand the concept of first love, and as a result, she's unable to create the storyboard, causing the movie production to come to a standstill.</p>
+                 </div>
+             
+                </div>
+            </div> 
+            </a>
+            
+            
+        </div>
+        
+      </div>
+      
+    </div>
+    <hr class="hr-under-spotlight">
+      <div class="home-screen-trending-section">
+        <div class="home-screen-trending-header"> Trending</div>
+       
+        <div class="hsti-items">
+            
+            <div class="card">
+                <a href="./anime discription/arifureta-s1.html">
+                    <img src="./images/arifureta.PNG" alt="arifureta">
+                    <div class="card-content">
+                    <h3 class="card-title">Arifureta</h3>
+                    <p class="card-description">Overpowered protagonist, harems, betrayal, revenge.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/onepiece-discription.html">
+                    <img src="./images/one-piece.PNG" alt="onepiece">
+                    <div class="card-content">
+                    <h3 class="card-title">One piece</h3>
+                    <p class="card-description">Adventure, friendship, treasure, pirates, freedom.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/dragon-ball-daima.html">
+                    <img src="./images/dragon-ball-daima.PNG" alt="dragon-ball-daima">
+                    <div class="card-content">
+                    <h3 class="card-title">Dragon Ball:diama</h3>
+                    <p class="card-description">Young Goku, new mysterious adventure</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/my-happy-marriage.html">
+                    <img src="./images/my-happy-marriage.PNG" alt="my-happy-marriage">
+                    <div class="card-content">
+                    <h3 class="card-title">My Happy Marriage</h3>
+                    <p class="card-description">Love, trust, laughter, partnership, warmth.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/sakamoto-days.html">
+                    <img src="./images/sakamoto-days.PNG" alt="sakamoto-days">
+                    <div class="card-content">
+                    <h3 class="card-title">Sakamoto Days</h3>
+                    <p class="card-description">Action-packed, comedic, retired-assassin chaos.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/the-apothecary-diaries.html">
+                    <img src="./images/the-apothecary-diaries.PNG" alt="theapothecarydairies">
+                    <div class="card-content">
+                    <h3 class="card-title">The Apothecary Diarie</h3>
+                    <p class="card-description">Mystery, intrigue, medicine, romance, adventure.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/solo-leveling-s1.html">
+                    <img src="./images/solo-leveling.PNG" alt="Nature">
+                    <div class="card-content">
+                    <h3 class="card-title">Solo Leveling</h3>
+                    <p class="card-description">Ordinary hunter unlocks extraordinary, relentless power</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/blue-box.html">
+                    <img src="./images/blue-box.PNG" alt="bluebox">
+                    <div class="card-content">
+                    <h3 class="hsti-card-title">Blue Box</h3>
+                    <p class="hsti-card-description">Romance, sports, determination, love triangle, growth.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/dandadan.html">
+                    <img src="./images/dandadan.PNG" alt="dandadan">
+                    <div class="card-content">
+                    <h3 class="card-title">Dandadan</h3>
+                    <p class="card-description">Supernatural chaos, aliens, yokai, wild romance.</p>
+                </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="./anime discription/windbreaker.html">
+                    <img src="./images/wind-breaker.PNG" alt="windbreaker">
+                    <div class="card-content">
+                    <h3 class="card-title">Wind Breaker</h3>
+                    <p class="card-description">Teenagers, friendships, rivalry, high school, competition, growth.
+                    </p>
+                </div>
+                </a>
+            </div>
+     
+           
+        </div>
+       </div>
+
+       <div class="page-container-section">
+       <div class="page-container-header"> <a href="./nav items/latest-release.html" >Latest Episode</a></div>
+        <div class="card-container">
+        
+        <div class="card">
+            <a href="./anime discription/0-yocsds-s2.html">
+                <img src="./images/0-years-old-child-starting-dash-story-season-2.PNG" alt="arifureta">
+                <div class="card-content">
+                <h3 class="card-title">Head Start at Birth</h3>
+                <p class="card-description">Reincarnated baby girl levels up magically.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/tales-of-herding-gods.html">
+                <img src="./images/tales-of-herding-gods.PNG" alt="onepiece">
+                <div class="card-content">
+                <h3 class="card-title">Tales of Herding Gods</h3>
+                <p class="card-description">Mythical cultivation, divine battles, cosmic adventure.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/yami-shibai-14.html">
+                <img src="./images/yami-shibai-14.PNG" alt="yami-shibai-14">
+                <div class="card-content">
+                <h3 class="card-title">Yami Shibai 14</h3>
+                <p class="card-description">Japanese ghost stories, eerie, unsettling, suspenseful.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/zenshu.html">
+                <img src="./images/zenshu.PNG" alt="zenshu">
+                <div class="card-content">
+                <h3 class="card-title">zenshu</h3>
+                <p class="card-description">Creative struggles, first love, anime industry.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/renegade-imortal.html">
+                <img src="./images/renegade-immortal.PNG" alt="renegade-immortal">
+                <div class="card-content">
+                <h3 class="card-title">Renegade Immortal</h3>
+                <p class="card-description">Martial arts, reincarnation, power, cultivation, adventure.</p>
+            </div>
+            </a>
+        </div>
+       
+        <div class="card">
+            <a href="./anime discription/theredrangerbecomesanadventerurinanotherworld.html">
+                <img src="./images/the-red-ranger-becomes-an-adventure-in-another-world.PNG" alt="the-red-ranger-becomes-an-adventure-in-another-world">
+                <div class="card-content">
+                <h3 class="card-title">The Red Ranger Becomes an Adventurer in Another World</h3>
+                <p class="card-description">Former hero explores fantasy world adventures.<p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/the-100-girlfriends-who-really-really-love-you-s2.html">
+                <img src="./images/the-100-gitlfriends-who-really-really-love-you-s2.PNG" alt="the-100-girlfriends-who-really-really-love-you-s2">
+                <div class="card-content">
+                <h3 class="card-title">The 100 Girlfriends Who Really Really Love You Season 2</h3>
+                <p class="card-description">Harem chaos continues with overwhelming love.</p>
+            </div>
+            </a>
+        </div>
+       
+        <div class="card">
+            <a href="./anime discription/i-want-to-escape-from-princess-lessons.html">
+                <img src="./images/i-want-to-escape-from-princess-lessons.PNG" alt="i-want-to-escape-from-princess-lessons">
+                <div class="card-content">
+                <h3 class="card-title">I Want to Escape From Princess Lessons</h3>
+                <p class="card-description">Noble girl rebels against royal training</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/shangri-la-frontier-s2.html">
+                <img src="./images/shangri-la-frontear-s2.jpg" alt="shangri-la-frontear-s2">
+                <div class="card-content">
+                <h3 class="hsti-card-title">Shangri La Frontier : Season 2</h3>
+                <p class="hsti-card-description">VR gaming, world building, thrilling battles.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/onepiece-log-fishman-island.html">
+                <img src="./images/one-piece-log-fishman-island.PNG" alt="one-piece-log-fishman-island">
+                <div class="card-content">
+                <h3 class="card-title">Onepiece log : fish-man island saga </h3>
+                <p class="card-description">Underwater adventure, fishmen, allies, rebellion, survival.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/blue-exorsist-the-blue-night-saga.html">
+                <img src="./images/blue-exorsist-the-blue-night-saga.PNG" alt="blue-exorsist-the-blue-night-saga">
+                <div class="card-content">
+                <h3 class="card-title">Blue Exorsist : The Blue Night Saga</h3>
+                <p class="card-description">Demonic powers, family, betrayal, fate, action.</p>
+            </div>
+            </a>
+        </div>
+        <div class="card">
+            <a href="./anime discription/solo-leveling-s2.html">
+                <img src="./images/solo-leveling.PNG" alt="solo-leveling-s2">
+                <div class="card-content">
+                <h3 class="card-title">Solo Leveling season 2: Arise From The Shadow</h3>
+                <p class="card-description">Intense battles, power growth, dark secrets.</p>
+            </div>
+            </a>
+        </div>
+       </div>
+       
+        </div>
+        <div class="page-container-section">
+             <div class="page-container-header"> <a href="./nav items/watchlist.html">Suggested For You</a></div>
+            <div class="card-container">
+         
+               <div class="card">
+                <a href="../anime discription/to-my-eternity.html">
+                    <img src="../images/to-your-eternity.PNG" alt="to-my-eternity">
+                    <div class="card-content">
+                        <h3 class="card-title">To Your Eternity</h3>
+                         <p class="card-description">Immortal being, emotional journey, endless growth.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/peachboy-riverside.html">
+                    <img src="../images/peachboy-riverside.PNG" alt="peachboy-riverside">
+                    <div class="card-content">
+                        <h3 class="card-title"> Peachboy Riverside</h3>
+                         <p class="card-description">Multiple Momotaros, wandering adventure, unexpected battles.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/that-time-i-got-reincarnated-as-a-slime.html">
+                    <img src="../images/that-time-i-got-reincarnated-as-a-slime.PNG" alt="that-time-i-got-reincarnated-as-a-slime">
+                    <div class="card-content">
+                        <h3 class="card-title">That Time I Got Reincarnated as a Slime</h3>
+                         <p class="card-description">Slime evolves, builds kingdom, befriends enemies</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/drifters.html">
+                    <img src="../images/drifters.PNG" alt="drifters">
+                    <div class="card-content">
+                        <h3 class="card-title">Drifters</h3>
+                         <p class="card-description">Historical warriors, fantasy war, chaotic battles.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/log-horizon.html">
+                    <img src="../images/log-horizon.PNG" alt="log-horizon">
+                    <div class="card-content">
+                        <h3 class="card-title">Log Horizon</h3>
+                         <p class="card-description">Trapped gamers, strategy, rebuilding virtual society.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/vinland-saga.html">
+                    <img src="../images/vinland-saga.PNG" alt="vinland-saga">
+                    <div class="card-content">
+                        <h3 class="card-title">Vinland Saga</h3>
+                         <p class="card-description">Viking revenge, war, harsh survival journey.
+    
+                         </p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/86.html">
+                    <img src="../images/86.PNG" alt="86">
+                    <div class="card-content">
+                        <h3 class="card-title">86</h3>
+                         <p class="card-description">Mecha warfare, discrimination, emotional sacrifices. </p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/no-game-no-life.html">
+                    <img src="../images/no-game-no-life.PNG" alt="no-game-no-life">
+                    <div class="card-content">
+                        <h3 class="card-title">No Game No Life</h3>
+                         <p class="card-description">Sibling gamers conquer fantasy world challenges.
+    
+                         </p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/overlord.html">
+                    <img src="../images/overlord.PNG" alt="overlord">
+                    <div class="card-content">
+                        <h3 class="card-title">Overlord</h3>
+                         <p class="card-description">Overpowered undead rules virtual fantasy world.
+    
+                         </p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/seraph-of-the-end.html">
+                    <img src="../images/seraph-of-the-end.PNG" alt="seraph-of-the-end">
+                    <div class="card-content">
+                        <h3 class="card-title">Seraph of The End</h3>
+                         <p class="card-description">Vampires vs. humans in post-apocalypse war.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="../anime discription/black-clover.html">
+                    <img src="../images/black-clover.PNG" alt="black-clover">
+                    <div class="card-content">
+                        <h3 class="card-title">Black Clover</h3>
+                         <p class="card-description">Magicless boy dreams of becoming wizard.</p>
+                    </div>
+                </a>
+               </div>
+               <div class="card">
+                <a href="./anime discription/tower-of-gods.html">
+                    <img src="./images/Tower-of-gods.PNG" alt="tower-of-gods">
+                    <div class="card-content">
+                        <h3 class="card-title">Tower of Gods</h3>
+                         <p class="card-description">Climber seeks truth in mysterious tower.</p>
+                    </div>
+                </a>
+               </div>
+             
+            </div>
+        
+        </div>
+ 
+    
+    </body>
+    <footer>
+    <div class="footer-container">
+      <div class="footer-container-top">
+        <div class="logo-footer">
+            <img src="../images/mokuroku-logo.png" alt="mokuroku">
+            <span class="logo-footer-text"><b>OKUROKU</b> </span>
+        </div>
+        <div class="socials-footer">
+            <div class="join-now-text"> <b>Join Now</b></div>
+            <div class="socials-footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-reddit" style="color: #fc3b1f;"></i>
+                <i class="fa-brands fa-discord" style="color: #6e83d3;"></i>
+            </div>
+        </div>
+     </div>
+     <hr>
+     <div class="footer-container-bottom">
+        
+        <div class="footer-container-bottom-leftside">
+            <p class="fcbl-tos"> <b>Terms Of Services</b></p>
+            <p class="fcbl-ma"><b>Mokuroku App</b></p>
+        </div>
+        <div class="footer-container-bottom-rightside">
+            <div class="help">
+                <p>Help</p>
+                <i class="fa-sharp fa-regular fa-circle-question"></i>
+
+            </div>
+            <div class="contact-us-footer">
+                <button class="contact-us-button"> contact us</button>
+            </div>
+        </div>
+     </div>
+        
+
+    </div>
+
+    </footer>
+</html>

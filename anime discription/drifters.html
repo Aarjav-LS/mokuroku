@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="../anime.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title> mokuroku</title>
+   
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-leftside">
+        <div class="menu-btn" id="menuBtn">
+            <div class="menu-btn__line menu-btn__line--top"></div>
+            <div class="menu-btn__line menu-btn__line--middle"></div>
+            <div class="menu-btn__line menu-btn__line--bottom"></div>
+        </div>
+           <nav class="side-menu" id="sideMenu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../anime.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="../nav items/about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="../nav items/dubbed-anime.html" class="menu-link">Dubbed Anime</a></li>
+                <li class="menu-item"><a href="../nav items/movies.html" class="menu-link">Movies</a></li>
+                <li class="menu-item"><a href="../nav items/mostpopular.html" class="menu-link">Most Popular</a></li>
+                <li class="menu-item"><a href="../nav items/latest-release.html" class="menu-link">Latest Release</a></li>
+                <li class="menu-item"><a href="../nav items/watchlist.html" class="menu-link">watchlist</a></li>
+            </ul>
+            </nav>
+               
+              <div class="overlay" id="overlay"></div>
+        <script>
+                // ===== STEP 1: Get all the elements we need =====
+                // The hamburger button
+                const menuBtn = document.getElementById('menuBtn');
+                // The side menu that slides in
+                const sideMenu = document.getElementById('sideMenu');
+                // The dark overlay behind the menu
+                const overlay = document.getElementById('overlay');
+                // All the menu links
+                const menuLinks = document.querySelectorAll('.menu-link');
+                
+                // ===== STEP 2: Create a function to toggle the menu =====
+                function toggleMenu() {
+                    // Toggle the 'open' class on the menu button (changes to X)
+                    menuBtn.classList.toggle('open');
+                    // Toggle the 'open' class on the side menu (slides it in)
+                    sideMenu.classList.toggle('open');
+                    // Toggle the 'show' class on the overlay (makes it visible)
+                    overlay.classList.toggle('show');
+                }
+                
+                // ===== STEP 3: Add click event listeners =====
+                // When the hamburger button is clicked
+                menuBtn.addEventListener('click', toggleMenu);
+                
+                // When the overlay is clicked
+                overlay.addEventListener('click', toggleMenu);
+                
+                // When any menu link is clicked
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        // Close the menu
+                        toggleMenu();
+                      
+                    });
+                });
+                
+                // ===== STEP 4: Add keyboard support =====
+                // Close menu when Escape key is pressed
+                document.addEventListener('keydown', function(event) {
+                    // Check if the menu is open and Escape key was pressed
+                    if (sideMenu.classList.contains('open') && event.key === 'Escape') {
+                        toggleMenu();
+                    }
+                });
+        </script>
+        
+            <div class="logo">
+                <img src="../images/mokuroku-logo.png" alt="mokuroku">
+                <span class="logo-text"><b>OKUROKU</b> </span>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search..." class="search">
+                <div class="search-icon">
+                 <i class="fas fa-search" ></i>
+                </div> 
+            </div>    
+            <div class="social">
+              <img src="../images/instagram.jpg" alt="instagram" class="instagram">
+              <img src="../images/discord.png" alt="discord" class="discord">
+              <img src="../images/twitter.png" alt="twitter" class="twitter">
+            </div>
+        </div>
+            <div class="genaric">
+               <div class="randomize">
+                   <div class="hst-icon">
+                    <i class="fas fa-random"></i>
+                   </div>
+                   <div class="hst-name">
+                    <span> RANDOMIZE</span> 
+
+                   </div>
+               </div>     
+                <div class="my-zone">
+                 <div class="hst-icon">
+                    <i class="fa-solid fa-feather"></i>
+                 </div>
+                 <div class="hst-name">
+                   <span> MYZONE</span> 
+
+                   </div>
+                </div>
+                <div class="community">
+                    <div class="hst-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="hst-name">
+                      <span> COMMUNITY</span> 
+   
+                    </div>
+                </div>
+               
+            </div>
+                  <div class="profile">
+                <div class="notification">
+                    <img src="../images/notification-icon.png" alt="notification-icon" class="notification-icon">
+                </div>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"> </i>
+                </div>
+            </div>           
+        </nav>
+    </header>
+    <div class="anime-discription-section">
+            <div class="anime-discription-trailer"> 
+                <iframe width="960" height="400" src="https://www.youtube.com/embed/7DnJUXa1axg?si=4VeF54VI5AnvGOPd"  title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+            </div>
+            <div class="anime-discription-info">
+                <div class="anime-discription-laftside">
+                 <div class="anime-discription-img"><img src="../images/drifters.PNG" alt="blue-box"></div>
+                 <div class="anime-discription-anime-details">
+                    <div class="adad-item-title">
+                        <span class="item-head"> Aired :</span>
+                        <span class="item-name"> Oct 7, 2016 to Dec 23, 2016</span>
+                    </div>
+                    <div class="adad-item-title">
+                        <span class="item-head"> Premiered :</span>
+                        <span class="item-name"> Fall 2016</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Duration :</span>
+                        <span class="item-name"> 23m</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Status :</span>
+                        <span class="item-name"> Finished Airing</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Genres :</span>
+                        <span class="item-name"> Action Adventure Comedy Fantasy Historical Samurai Seinen</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Producers :</span>
+                        <span class="item-name"> Hoods Entertainment, NBCUniversal Entertainment Japan, Shounen Gahousha, Hoods Drifters Studio, Funimation</span>
+                    </div> 
+                 </div>
+                </div>
+                <div class="anime-discription-paragraph">
+                    <h1>Drifters</h1>
+                    <a href="https://hianime.to/watch/drifters-590?ep=11479&ep=11479"><div class="adp-watch-now">  <i class="fa-solid fa-play"></i>   Watch Now  </div></a>
+                    <p>At the Battle of Sekigahara in 1600, Toyohisa Shimazu is the rearguard for his retreating troops, and is critically wounded when he suddenly finds himself in a modern, gleaming white hallway. Faced with only a stoic man named Murasaki and hundreds of doors on both sides, Toyohisa is pulled into the nearest door and into a world completely unlike his own. The strange land is populated by all manner of fantastical creatures, as well as warriors from different eras of Toyohisa's world who were thought to be dead. Quickly befriending the infamous warlord Nobunaga Oda and the ancient archer Yoichi Suketaka Nasu, Toyohisa learns of the political unrest tearing through the continent. Furthermore, they have been summoned as "Drifters" to fight against the "Ends," people who are responsible for the creation of the Orte Empire and are trying to annihilate the Drifters. As the Ends grow more powerful, so does the Empire's persecution of elves and other demihumans. It is up to Toyohisa and his group of unconventional heroes to battle in a brand-new world war to help the Empire's subjects, while protecting the land to claim for themselves and challenging the Ends.</p>
+
+                </div>
+            </div>
+
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="footer-container-top">
+        <div class="logo-footer">
+            <img src="../images/mokuroku-logo.png" alt="mokuroku">
+            <span class="logo-footer-text"><b>OKUROKU</b> </span>
+        </div>
+        <div class="socials-footer">
+            <div class="join-now-text"> <b>Join Now</b></div>
+            <div class="socials-footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-reddit" style="color: #fc3b1f;"></i>
+                <i class="fa-brands fa-discord" style="color: #6e83d3;"></i>
+            </div>
+        </div>
+     </div>
+     <hr>
+     <div class="footer-container-bottom">
+        
+        <div class="footer-container-bottom-leftside">
+            <p class="fcbl-tos"> <b>Terms Of Services</b></p>
+            <p class="fcbl-ma"><b>Mokuroku App</b></p>
+        </div>
+        <div class="footer-container-bottom-rightside">
+            <div class="help">
+                <p>Help</p>
+                <i class="fa-sharp fa-regular fa-circle-question"></i>
+
+            </div>
+            <div class="contact-us-footer">
+                <button class="contact-us-button"> contact us</button>
+            </div>
+        </div>
+     </div>
+        
+
+    </div>
+
+    </footer>
+</html>

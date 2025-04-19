@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../anime.css">
+    <title>Mokuroku</title>
+    
+    <style>
+        .background-all{
+            background-repeat: no-repeat;
+            background: url(../images/gb\ animee.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+    
+    
+      .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        bottom: 0;
+      }
+      
+        .background{
+            
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            height: 90vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 0;
+
+        }
+        .cross{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            width: 25px;
+            margin-left: 1290px;
+            position: absolute;
+            color: rgb(233, 232, 232);
+            z-index: 2;
+            font-size: 50px;
+        }
+        .profile-container{
+            color: rgb(255, 255, 255);
+            padding: 40px;
+            border: 2px solid;
+            border-radius: 20px;
+            font-weight: 400;
+          font-size: 20px;
+        }
+        .profile-container h3{
+            font-size: 30px;
+
+        }
+       
+
+        h1{
+            font-size: 60px;
+            font: bold;
+            font-weight: 1000;
+            color: rgb(0, 0, 0);
+          -webkit-text-stroke: 3px rgb(255, 255, 255);
+        }
+       
+        .blur{
+            
+               backdrop-filter: blur(20px) ;
+               background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+                     
+        }
+
+        .profile-card-wrap-container{
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+           
+        }
+        .profile-card-wrap{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            align-content: center;
+            width: 900px; 
+            
+        }
+        .profile-card img{
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .profile-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            backdrop-filter: blur(20px) ;
+           
+            padding: 20px;
+            border: 2px solid;
+            border-color: white;
+            border-radius: 15px;
+        }
+        .participents-container{
+            padding-bottom: 70px;
+        }
+    </style>
+      
+</head>
+<body><div class="background-all">
+    <header>
+        <nav>
+            <div class="nav-leftside">
+        <div class="menu-btn" id="menuBtn">
+            <div class="menu-btn__line menu-btn__line--top"></div>
+            <div class="menu-btn__line menu-btn__line--middle"></div>
+            <div class="menu-btn__line menu-btn__line--bottom"></div>
+        </div>
+           <nav class="side-menu" id="sideMenu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../anime.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="../nav items/about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="../nav items/dubbed-anime.html" class="menu-link">Dubbed Anime</a></li>
+                <li class="menu-item"><a href="../nav items/movies.html" class="menu-link">Movies</a></li>
+                <li class="menu-item"><a href="../nav items/mostpopular.html" class="menu-link">Most Popular</a></li>
+                <li class="menu-item"><a href="../nav items/latest-release.html" class="menu-link">Latest Release</a></li>
+                <li class="menu-item"><a href="../nav items/watchlist.html" class="menu-link">watchlist</a></li>
+            </ul>
+            </nav>
+               
+              <div class="overlay" id="overlay"></div>
+        <script>
+                // ===== STEP 1: Get all the elements we need =====
+                // The hamburger button
+                const menuBtn = document.getElementById('menuBtn');
+                // The side menu that slides in
+                const sideMenu = document.getElementById('sideMenu');
+                // The dark overlay behind the menu
+                const overlay = document.getElementById('overlay');
+                // All the menu links
+                const menuLinks = document.querySelectorAll('.menu-link');
+                
+                // ===== STEP 2: Create a function to toggle the menu =====
+                function toggleMenu() {
+                    // Toggle the 'open' class on the menu button (changes to X)
+                    menuBtn.classList.toggle('open');
+                    // Toggle the 'open' class on the side menu (slides it in)
+                    sideMenu.classList.toggle('open');
+                    // Toggle the 'show' class on the overlay (makes it visible)
+                    overlay.classList.toggle('show');
+                }
+                
+                // ===== STEP 3: Add click event listeners =====
+                // When the hamburger button is clicked
+                menuBtn.addEventListener('click', toggleMenu);
+                
+                // When the overlay is clicked
+                overlay.addEventListener('click', toggleMenu);
+                
+                // When any menu link is clicked
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        // Close the menu
+                        toggleMenu();
+                      
+                    });
+                });
+                
+                // ===== STEP 4: Add keyboard support =====
+                // Close menu when Escape key is pressed
+                document.addEventListener('keydown', function(event) {
+                    // Check if the menu is open and Escape key was pressed
+                    if (sideMenu.classList.contains('open') && event.key === 'Escape') {
+                        toggleMenu();
+                    }
+                });
+        </script>
+        
+            <div class="logo">
+                <img src="../images/mokuroku-logo.png" alt="mokuroku">
+                <span class="logo-text"><b>OKUROKU</b> </span>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search..." class="search">
+                <div class="search-icon">
+                 <i class="fas fa-search" ></i>
+                </div> 
+            </div>    
+            <div class="social">
+              <img src="../images/instagram.jpg" alt="instagram" class="instagram">
+              <img src="../images/discord.png" alt="discord" class="discord">
+              <img src="../images/twitter.png" alt="twitter" class="twitter">
+            </div>
+        </div>
+            <div class="genaric">
+               <div class="randomize">
+                   <div class="hst-icon">
+                    <i class="fas fa-random"></i>
+                   </div>
+                   <div class="hst-name">
+                    <span> RANDOMIZE</span> 
+
+                   </div>
+               </div>     
+                <div class="my-zone">
+                 <div class="hst-icon">
+                    <i class="fa-solid fa-feather"></i>
+                 </div>
+                 <div class="hst-name">
+                   <span> MYZONE</span> 
+
+                   </div>
+                </div>
+                <div class="community">
+                    <div class="hst-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="hst-name">
+                      <span> COMMUNITY</span> 
+   
+                    </div>
+                </div>
+               
+            </div>
+                  <div class="profile">
+                <div class="notification">
+                    <img src="../images/notification-icon.png" alt="notification-icon" class="notification-icon">
+                </div>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"> </i>
+                </div>
+            </div>           
+        </nav>
+    </header>
+    
+      
+        <div class="background">
+            <div class="content">
+           <div class ="title">
+              <h1>About US </h1> 
+            </div>
+            <div class="blur">
+                <div class="profile-container">
+                   <h3> MOKUTOKU</h3>
+                    <p>MOKUTOKU, also known as "catalog" in Japanese, is your go-to website if you're an anime lover stuck on what to watch next. Whether you're in the mood for something new, the hottest trending series, or a classic anime movie, MOKUTOKU has your back. We help you discover your next favorite show so you can kick back, relax, and enjoy your free time the otaku way.</p> 
+                </div>
+             </div>
+            </div>
+        
+        </div>
+    
+    <div class="participents-container">
+        <div class="profile-card-wrap-container">
+        <div class="profile-card-wrap">
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="../images/Aarjav.PNG" alt="nigesh">
+            </div>
+            <p>Aarjav Lal Shrestha</p>
+    
+        </div>
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="../images/nityan.PNG" alt="nigesh">
+            </div>
+            <p>Nityan Shrestha</p>
+    
+        </div>
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="../images/anze.PNG" alt="nigesh">
+            </div>
+            <p>Angeela Maharjan</p>
+    
+        </div>
+        <div class="profile-card">
+            <div class="profile-img">
+                <img src="../images/suyog.PNG" alt="nigesh">
+            </div>
+            <p>Suyog Adhikari</p>
+    
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+    <footer>
+    <div class="footer-container">
+      <div class="footer-container-top">
+        <div class="logo-footer">
+            <img src="../images/mokuroku-logo.png" alt="mokuroku">
+            <span class="logo-footer-text"><b>OKUROKU</b> </span>
+        </div>
+        <div class="socials-footer">
+            <div class="join-now-text"> <b>Join Now</b></div>
+            <div class="socials-footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-reddit" style="color: #fc3b1f;"></i>
+                <i class="fa-brands fa-discord" style="color: #6e83d3;"></i>
+            </div>
+        </div>
+     </div>
+     <hr>
+     <div class="footer-container-bottom">
+        
+        <div class="footer-container-bottom-leftside">
+            <p class="fcbl-tos"> <b>Terms Of Services</b></p>
+            <p class="fcbl-ma"><b>Mokuroku App</b></p>
+        </div>
+        <div class="footer-container-bottom-rightside">
+            <div class="help">
+                <p>Help</p>
+                <i class="fa-sharp fa-regular fa-circle-question"></i>
+
+            </div>
+            <div class="contact-us-footer">
+                <button class="contact-us-button"> contact us</button>
+            </div>
+        </div>
+     </div>
+        
+
+    </div>
+
+    </footer>
+</body>
+
+
+</html>

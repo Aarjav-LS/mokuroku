@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="../anime.css">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title> mokuroku</title>
+   
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="nav-leftside">
+        <div class="menu-btn" id="menuBtn">
+            <div class="menu-btn__line menu-btn__line--top"></div>
+            <div class="menu-btn__line menu-btn__line--middle"></div>
+            <div class="menu-btn__line menu-btn__line--bottom"></div>
+        </div>
+           <nav class="side-menu" id="sideMenu">
+            <ul class="menu-list">
+                <li class="menu-item"><a href="../anime.html" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="../nav items/about.html" class="menu-link">About</a></li>
+                <li class="menu-item"><a href="../nav items/dubbed-anime.html" class="menu-link">Dubbed Anime</a></li>
+                <li class="menu-item"><a href="../nav items/movies.html" class="menu-link">Movies</a></li>
+                <li class="menu-item"><a href="../nav items/mostpopular.html" class="menu-link">Most Popular</a></li>
+                <li class="menu-item"><a href="../nav items/latest-release.html" class="menu-link">Latest Release</a></li>
+                <li class="menu-item"><a href="../nav items/watchlist.html" class="menu-link">watchlist</a></li>
+            </ul>
+            </nav>
+               
+              <div class="overlay" id="overlay"></div>
+        <script>
+                // ===== STEP 1: Get all the elements we need =====
+                // The hamburger button
+                const menuBtn = document.getElementById('menuBtn');
+                // The side menu that slides in
+                const sideMenu = document.getElementById('sideMenu');
+                // The dark overlay behind the menu
+                const overlay = document.getElementById('overlay');
+                // All the menu links
+                const menuLinks = document.querySelectorAll('.menu-link');
+                
+                // ===== STEP 2: Create a function to toggle the menu =====
+                function toggleMenu() {
+                    // Toggle the 'open' class on the menu button (changes to X)
+                    menuBtn.classList.toggle('open');
+                    // Toggle the 'open' class on the side menu (slides it in)
+                    sideMenu.classList.toggle('open');
+                    // Toggle the 'show' class on the overlay (makes it visible)
+                    overlay.classList.toggle('show');
+                }
+                
+                // ===== STEP 3: Add click event listeners =====
+                // When the hamburger button is clicked
+                menuBtn.addEventListener('click', toggleMenu);
+                
+                // When the overlay is clicked
+                overlay.addEventListener('click', toggleMenu);
+                
+                // When any menu link is clicked
+                menuLinks.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        // Close the menu
+                        toggleMenu();
+                      
+                    });
+                });
+                
+                // ===== STEP 4: Add keyboard support =====
+                // Close menu when Escape key is pressed
+                document.addEventListener('keydown', function(event) {
+                    // Check if the menu is open and Escape key was pressed
+                    if (sideMenu.classList.contains('open') && event.key === 'Escape') {
+                        toggleMenu();
+                    }
+                });
+        </script>
+        
+            <div class="logo">
+                <img src="../images/mokuroku-logo.png" alt="mokuroku">
+                <span class="logo-text"><b>OKUROKU</b> </span>
+            </div>
+            <div class="searchbar">
+                <input type="text" placeholder="search..." class="search">
+                <div class="search-icon">
+                 <i class="fas fa-search" ></i>
+                </div> 
+            </div>    
+            <div class="social">
+              <img src="../images/instagram.jpg" alt="instagram" class="instagram">
+              <img src="../images/discord.png" alt="discord" class="discord">
+              <img src="../images/twitter.png" alt="twitter" class="twitter">
+            </div>
+        </div>
+            <div class="genaric">
+               <div class="randomize">
+                   <div class="hst-icon">
+                    <i class="fas fa-random"></i>
+                   </div>
+                   <div class="hst-name">
+                    <span> RANDOMIZE</span> 
+
+                   </div>
+               </div>     
+                <div class="my-zone">
+                 <div class="hst-icon">
+                    <i class="fa-solid fa-feather"></i>
+                 </div>
+                 <div class="hst-name">
+                   <span> MYZONE</span> 
+
+                   </div>
+                </div>
+                <div class="community">
+                    <div class="hst-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <div class="hst-name">
+                      <span> COMMUNITY</span> 
+   
+                    </div>
+                </div>
+               
+            </div>
+                  <div class="profile">
+                <div class="notification">
+                    <img src="../images/notification-icon.png" alt="notification-icon" class="notification-icon">
+                </div>
+                <div class="profile-icon">
+                    <i class="fa-solid fa-user"> </i>
+                </div>
+            </div>           
+        </nav>
+    </header>
+    <div class="anime-discription-section">
+            <div class="anime-discription-trailer"> 
+                <iframe width="960" height="400" src="https://www.youtube.com/embed/r3rJqoqk4gQ?si=NPObYb5n1fWEtY0Y"  title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+            </div>
+            <div class="anime-discription-info">
+                <div class="anime-discription-laftside">
+                 <div class="anime-discription-img"><img src="../images/GATE.PNG" alt="blue-box"></div>
+                 <div class="anime-discription-anime-details">
+                    <div class="adad-item-title">
+                        <span class="item-head"> Aired :</span>
+                        <span class="item-name"> Jul 4, 2015 to Sep 19, 2015</span>
+                    </div>
+                    <div class="adad-item-title">
+                        <span class="item-head"> Premiered :</span>
+                        <span class="item-name"> Summer 2015</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Duration :</span>
+                        <span class="item-name"> 23m</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Status :</span>
+                        <span class="item-name"> Finished Airing</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Genres :</span>
+                        <span class="item-name"> Action Adventure Fantasy Military Isekai</span>
+                    </div> 
+                    <div class="adad-item-title">
+                        <span class="item-head"> Producers :</span>
+                        <span class="item-name"> Genco, Magic Capsule, Warner Bros. Japan, KlockWorx, Showgate, Bandai Namco Games, A-1 Pictures, Sentai Filmworks</span>
+                    </div> 
+                 </div>
+                </div>
+                <div class="anime-discription-paragraph">
+                    <h1>GATE</h1>
+                    <a href="https://hianime.to/watch/gate-891?ep=15307"><div class="adp-watch-now">  <i class="fa-solid fa-play"></i>   Watch Now  </div></a>
+                    <p>Off-duty Japan Self-Defense Forces (JSDF) officer and otaku, Youji Itami, is on his way to attend a doujin convention in Ginza, Tokyo when a mysterious portal in the shape of a large gate suddenly appears. From this gate, supernatural creatures and warriors clad in medieval armor emerge, charging through the city, killing and destroying everything in their path. With swift actions, Youji saves as many lives as he can while the rest of the JSDF direct their efforts towards stopping the invasion. Three months after the attack, Youji has been tasked with leading a special recon team, as part of a JSDF task force, that will be sent to the world beyond the gate—now being referred to as the "Special Region." They must travel into this unknown world in order to learn more about what they are dealing with and attempt to befriend the locals in hopes of creating peaceful ties with the ruling empire. But if they fail, they face the consequence of participating in a devastating war that will engulf both sides of the gate.</p>
+
+                </div>
+            </div>
+
+    </div>
+</body>
+<footer>
+    <div class="footer-container">
+      <div class="footer-container-top">
+        <div class="logo-footer">
+            <img src="../images/mokuroku-logo.png" alt="mokuroku">
+            <span class="logo-footer-text"><b>OKUROKU</b> </span>
+        </div>
+        <div class="socials-footer">
+            <div class="join-now-text"> <b>Join Now</b></div>
+            <div class="socials-footer-icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-square-reddit" style="color: #fc3b1f;"></i>
+                <i class="fa-brands fa-discord" style="color: #6e83d3;"></i>
+            </div>
+        </div>
+     </div>
+     <hr>
+     <div class="footer-container-bottom">
+        
+        <div class="footer-container-bottom-leftside">
+            <p class="fcbl-tos"> <b>Terms Of Services</b></p>
+            <p class="fcbl-ma"><b>Mokuroku App</b></p>
+        </div>
+        <div class="footer-container-bottom-rightside">
+            <div class="help">
+                <p>Help</p>
+                <i class="fa-sharp fa-regular fa-circle-question"></i>
+
+            </div>
+            <div class="contact-us-footer">
+                <button class="contact-us-button"> contact us</button>
+            </div>
+        </div>
+     </div>
+        
+
+    </div>
+
+    </footer>
+</html>

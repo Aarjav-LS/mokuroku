@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <title>Mokuroku</title>
+    
+    <style>
+       
+      
+        .background{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            min-height: 100vh;
+            background-repeat: no-repeat;
+            background: url(../images/login-backdrop.PNG) no-repeat;
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: -1;
+
+        }
+        .cross{
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+            width: 200vh;
+            position: absolute;
+            color: rgb(233, 232, 232);
+            z-index: 2;
+            font-size: 50px;
+        }
+
+        h1{
+            font: bold;
+            font-weight: 1000;
+            color: white;
+        }
+        .profile-container{
+            border: 2px solid;
+            border-color: rgb(255, 255, 255);
+            border-radius: 10px;
+           gap: 20px;
+           padding: 30px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+           align-content: center;
+        
+        }
+        .blur{
+            
+               backdrop-filter: blur(20px);
+              
+        }
+
+        .profile-input{
+            border: 2px solid;
+            border-radius: 60px;
+            border-color: rgb(255, 255, 255);
+            height: 50px;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+           
+            
+        }
+        .profile-input input{
+            border: none;
+            outline: none;
+            width: 300px;
+            border:none;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+        }
+        .profile-input input::placeholder{
+            color: white;
+            font-size: 14px;
+        }
+        .remember-forget label{
+            color: white;
+        }
+        .remember-forget a{
+            color: white;
+            text-decoration: none;
+        }
+        .remember-forget{
+            display: flex;
+            justify-content: space-between;
+            width: 52vh;
+        }
+        .login-button{
+            width: 350px;
+            height: 50px;
+            border-radius: 50px;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #2e2e2e;
+            background-color: white;
+            transition: .2s ease;
+        }
+        .login-button:hover{
+            background-color: rgb(151, 151, 151);
+            color: white;
+        }
+        .register-link p{
+            color: white;
+            font-size: 14px;
+        }
+        .register-link p a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+
+        }
+        .register-link p a:hover{
+            text-decoration: underline;
+            transition: .2s ease;
+        }
+        .remember-forget a:hover{
+            text-decoration: underline;
+            color: white;
+        }
+        .remember-forget label:hover{
+            text-decoration: underline;
+            color: white;
+        }
+
+       
+
+    </style>
+</head>
+<body>
+    <a href="../anime.html">  
+        <div class="cross">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </a>
+    <div class="background">
+    <div class="blur">
+    <div class="profile-container">
+        <h1>Login</h1>
+
+        <div class="profile-input">
+            <input type="text" placeholder="Username" class="username">
+        </div>
+
+        <div class="profile-input">
+            <input type="password" placeholder="Password" class="username">
+        </div>
+
+        <div class="remember-forget">
+            <label>
+                <input type="checkbox"> Remember me
+            </label>
+            <a href="#"> Forgot Password?</a>
+        </div>
+
+        <a href="../anime.html"><button class="login-button"> Login</button></a>
+
+        <div class="register-link">
+            <p> Don't have an account?
+            <a href="#">Register</a>
+            </p>
+        </div>
+
+    </div>
+    </div>
+</div>
+</body>
+</html>
